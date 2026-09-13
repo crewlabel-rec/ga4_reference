@@ -308,6 +308,65 @@
     font-size: 12px;
     color: var(--text-faint);
   }
+
+  .link-groups{
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+    background: var(--surface);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+  }
+
+  .link-group-title{
+    background: var(--surface-2);
+    color: var(--accent-strong);
+    font-weight: 700;
+    font-size: 14.5px;
+    padding: 11px 16px;
+    border-left: 3px solid var(--accent);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .link-card{
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .link-list:last-child .link-card:last-child{ border-bottom: none; }
+
+  .link-card:nth-child(odd){ background: var(--row-a); }
+  .link-card:nth-child(even){ background: var(--row-b); }
+
+  .link-url{
+    font-family: var(--font-mono);
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--accent-strong);
+    word-break: break-all;
+    line-height: 1.5;
+    user-select: all;
+  }
+
+  .link-meta{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px 10px;
+    font-size: 12.5px;
+    color: var(--text-muted);
+  }
+
+  .link-meta .sep{
+    color: var(--text-faint);
+  }
+
+  .link-meta b{
+    color: var(--text);
+    font-weight: 600;
+  }
 </style>
 
 <div class="wrap">
@@ -442,5 +501,138 @@
     </div>
   </div>
 
-  <footer>크루레이블 · 크루레이블 랜딩 유입 데이터 참고용 · GA4 이벤트 이름은 임의로 표시 문구를 바꿀 수 없어 이 표로 별도 정리함</footer>
+  <header style="margin-top:44px;">
+    <p class="eyebrow">크루레이블 · UTM 관리자료</p>
+    <h1>UTM 단축링크 관리표</h1>
+    <p class="sub">유튜브·인스타·스레드에 배포한 <b>단축주소</b>가 어디에 왜 걸려있는지 정리한 표. 새 링크 추가·수정 시 이 표부터 업데이트할 것.</p>
+  </header>
+
+  <div class="link-groups">
+
+    <div class="link-group-title">키콘텐츠</div>
+    <div class="link-list">
+      <div class="link-card">
+        <div class="link-url">https://crewlabel-rec.github.io/key-people/</div>
+        <div class="link-meta">
+          <b>키콘텐츠 고정댓글·더보기(일반인)</b><span class="sep">·</span>일반인 랜딩<span class="sep">·</span>키콘텐츠(일반인용) 영상 고정댓글 + 더보기<span class="sep">·</span><span class="status confirmed">적용 완료</span>
+        </div>
+      </div>
+      <div class="link-card">
+        <div class="link-url">https://crewlabel-rec.github.io/key-broadcaster/</div>
+        <div class="link-meta">
+          <b>키콘텐츠 고정댓글·더보기(방송인)</b><span class="sep">·</span>방송인 랜딩<span class="sep">·</span>키콘텐츠(방송인용) 영상 더보기<span class="sep">·</span><span class="status pending">더보기 완료 · 고정댓글 예정</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="link-group-title">채널 홈 / 업로드 더보기</div>
+    <div class="link-list">
+      <div class="link-card">
+        <div class="link-url">https://crewlabel-rec.github.io/channel-people/</div>
+        <div class="link-meta">
+          <b>채널 홈 소개(일반인)</b><span class="sep">·</span>일반인 랜딩<span class="sep">·</span>채널 홈 소개글 링크<span class="sep">·</span><span class="status confirmed">적용 완료</span>
+        </div>
+      </div>
+      <div class="link-card">
+        <div class="link-url">https://crewlabel-rec.github.io/channel-broadcaster/</div>
+        <div class="link-meta">
+          <b>채널 홈 소개(방송인)</b><span class="sep">·</span>방송인 랜딩<span class="sep">·</span>채널 홈 소개글 링크<span class="sep">·</span><span class="status confirmed">적용 완료</span>
+        </div>
+      </div>
+      <div class="link-card">
+        <div class="link-url">https://crewlabel-rec.github.io/more-people/</div>
+        <div class="link-meta">
+          <b>업로드 기본설정 더보기(일반인)</b><span class="sep">·</span>일반인 랜딩<span class="sep">·</span>유튜브 스튜디오 업로드 기본설정 더보기란<span class="sep">·</span><span class="status confirmed">적용 완료</span>
+        </div>
+      </div>
+      <div class="link-card">
+        <div class="link-url">https://crewlabel-rec.github.io/more-broadcaster/</div>
+        <div class="link-meta">
+          <b>업로드 기본설정 더보기(방송인)</b><span class="sep">·</span>방송인 랜딩<span class="sep">·</span>유튜브 스튜디오 업로드 기본설정 더보기란<span class="sep">·</span><span class="status confirmed">적용 완료</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="link-group-title">인스타 / 스레드 bio</div>
+    <div class="link-list">
+      <div class="link-card">
+        <div class="link-url">https://crewlabel-rec.github.io/insta-people/</div>
+        <div class="link-meta">
+          <b>인스타그램 bio(일반인)</b><span class="sep">·</span>일반인 랜딩<span class="sep">·</span>인스타그램 프로필 링크<span class="sep">·</span><span class="status confirmed">적용 완료</span>
+        </div>
+      </div>
+      <div class="link-card">
+        <div class="link-url">https://crewlabel-rec.github.io/insta-broadcaster/</div>
+        <div class="link-meta">
+          <b>인스타그램 bio(방송인)</b><span class="sep">·</span>방송인 랜딩<span class="sep">·</span>인스타그램 프로필 링크<span class="sep">·</span><span class="status confirmed">적용 완료</span>
+        </div>
+      </div>
+      <div class="link-card">
+        <div class="link-url">https://crewlabel-rec.github.io/threads-people/</div>
+        <div class="link-meta">
+          <b>스레드 bio(일반인)</b><span class="sep">·</span>일반인 랜딩<span class="sep">·</span>스레드 프로필 링크<span class="sep">·</span><span class="status pending">미적용(채널 미개설)</span>
+        </div>
+      </div>
+      <div class="link-card">
+        <div class="link-url">https://crewlabel-rec.github.io/threads-broadcaster/</div>
+        <div class="link-meta">
+          <b>스레드 bio(방송인)</b><span class="sep">·</span>방송인 랜딩<span class="sep">·</span>스레드 프로필 링크<span class="sep">·</span><span class="status pending">미적용(채널 미개설)</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="link-group-title">이벤트용</div>
+    <div class="link-list">
+      <div class="link-card">
+        <div class="link-url">https://crewlabel-rec.github.io/event-youtube-people/</div>
+        <div class="link-meta">
+          <b>유튜브 이벤트(일반인)</b><span class="sep">·</span>일반인 랜딩<span class="sep">·</span>유튜브 이벤트 발생 시 사용<span class="sep">·</span><span class="status pending">미적용(이벤트 대기)</span>
+        </div>
+      </div>
+      <div class="link-card">
+        <div class="link-url">https://crewlabel-rec.github.io/event-youtube-broadcaster/</div>
+        <div class="link-meta">
+          <b>유튜브 이벤트(방송인)</b><span class="sep">·</span>방송인 랜딩<span class="sep">·</span>유튜브 이벤트 발생 시 사용<span class="sep">·</span><span class="status pending">미적용(이벤트 대기)</span>
+        </div>
+      </div>
+      <div class="link-card">
+        <div class="link-url">https://crewlabel-rec.github.io/event-insta-people/</div>
+        <div class="link-meta">
+          <b>인스타 이벤트(일반인)</b><span class="sep">·</span>일반인 랜딩<span class="sep">·</span>인스타 이벤트 발생 시 사용<span class="sep">·</span><span class="status pending">미적용(이벤트 대기)</span>
+        </div>
+      </div>
+      <div class="link-card">
+        <div class="link-url">https://crewlabel-rec.github.io/event-insta-broadcaster/</div>
+        <div class="link-meta">
+          <b>인스타 이벤트(방송인)</b><span class="sep">·</span>방송인 랜딩<span class="sep">·</span>인스타 이벤트 발생 시 사용<span class="sep">·</span><span class="status pending">미적용(이벤트 대기)</span>
+        </div>
+      </div>
+      <div class="link-card">
+        <div class="link-url">https://crewlabel-rec.github.io/event-threads-people/</div>
+        <div class="link-meta">
+          <b>스레드 이벤트(일반인)</b><span class="sep">·</span>일반인 랜딩<span class="sep">·</span>스레드 이벤트 발생 시 사용<span class="sep">·</span><span class="status pending">미적용(이벤트 대기)</span>
+        </div>
+      </div>
+      <div class="link-card">
+        <div class="link-url">https://crewlabel-rec.github.io/event-threads-broadcaster/</div>
+        <div class="link-meta">
+          <b>스레드 이벤트(방송인)</b><span class="sep">·</span>방송인 랜딩<span class="sep">·</span>스레드 이벤트 발생 시 사용<span class="sep">·</span><span class="status pending">미적용(이벤트 대기)</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="legend">
+    <div class="legend-item">
+      <span class="legend-dot" style="background:var(--accent)"></span>
+      <span><b>적용 완료</b> — 실제 위치에 게시·적용된 링크</span>
+    </div>
+    <div class="legend-item">
+      <span class="legend-dot" style="background:var(--pending-fg)"></span>
+      <span><b>미적용</b> — 링크는 만들어뒀지만 아직 채널 미개설·이벤트 미발생 등의 이유로 게시 전인 상태</span>
+    </div>
+  </div>
+
+  <footer>크루레이블 · 크루레이블 랜딩 유입 데이터 참고용 · GA4 이벤트 이름은 임의로 표시 문구를 바꿀 수 없어 이 표로 별도 정리함 · URL을 클릭하면 전체 선택되어 바로 복사 가능</footer>
 </div>
